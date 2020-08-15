@@ -1,0 +1,215 @@
+<!-- saved from url=(0044)file:///home/sibasis/Downloads/htmlpage.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><style>
+  .predection_container{
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px;
+    background-image:url(https://files.nc.gov/cash/styles/carousel/public/images/magnifyingglasswithcoins.jpg?.Yzmn551lsJHH7d3vBt66zCiH2WX5RN7&itok=CldCwb9Z);
+    background-size: 100% 100%;
+  }
+  .form_heading{
+    text-align: center;
+    font-family: DM Sans;
+    font-size: 30px;
+  }
+  .formbox1{width: 270px !important;}
+  .formbox,.formbox1{
+  width: 250px;
+  opacity: 0.34;
+  border-radius: 5px;
+  border: solid 1px #707070;
+  background-color: #ffffff;
+  margin-left: 10px;
+  margin-top: 15px;
+  font-family: DM Sans;
+  opacity: 0.47;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-align: left;
+  color: #0e1b2b;
+  padding: 10px 10px;
+}
+.formbox2{width: 36% !important;}
+.label_text{width:200px;float:left;text-align: left;padding: 15px 15px;font-size: 20px;font-family: DM Sans;}
+.submit-button{width: 270px;height:30px;margin-top:20px;border-radius: 5px;border:solid 1px #707070;background-color:#45a049;float: right;}
+</style>
+</head><body><div class="predection_container">`
+  <h1 class="form_heading">Credit Risk Predection</h1>
+  <div class="prow" style="display: flex;justify-content: center;align-items: center;">
+    <form action="/result" method="POST">
+      <div class="form-group">
+        <label for="Amount" class="label_text">Amount</label>
+        <input class="formbox" type="number" name="Amount" id="amount" placeholder="Enter credit amount(DM)" required="">
+      </div>
+      <div class="form-group">
+        <label for="Age" class="label_text">Age</label>
+        <input class="formbox" type="number" name="age" id="age" placeholder="Enter your age" required="">
+      </div>
+      <div class="form-group">
+        <label for="status" class="label_text">Status</label>
+        <select id="status" name="status" class="formbox1">
+          <option value="default">Select status of your checking account with the bank</option>
+          <option value="no checking account">no checking account</option>
+          <option value="..&lt;0 DM">..&lt;0 DM</option>
+          <option value="0&lt;=..&lt;200 DM">0&lt;=..&lt;200 DM</option>
+          <option value="..&gt;= 200 DM/salary for at least 1 year">..&gt;= 200 DM/salary for at least 1 year</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="credit_history" class="label_text">Credit Histroy</label>
+        <select id="credit_history" name="credit_history" class="formbox1">
+          <option value="default">Select history of compliance with previous or concurrent credit contracts</option>
+          <option value="delay in paying off in the past">delay in paying off in the past</option>
+          <option value="critical account/other credits elsewhere">critical account/other credits elsewhere</option>
+          <option value="no credits taken/all credits paid back duly">no credits taken/all credits paid back duly</option>
+          <option value="existing credits paid back duly till now">existing credits paid back duly till now</option>
+          <option value="all credits at this bank paid back duly">all credits at this bank paid back duly</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="purpose" class="label_text">Purpose</label>
+        <select id="purpose" name="purpose" class="formbox1">
+          <option value="default">Select purpose for which the credit is needed</option>
+          <option value="others">others</option>
+          <option value="car (new)">car (new)</option>
+          <option value="car (used)">car (used)</option>
+          <option value="furniture/equipment">furniture/equipment</option>
+          <option value="radio/television">radio/television</option>
+          <option value="domestic appliances">domestic appliances</option>
+          <option value="repairs">repairs</option>
+          <option value="education">education</option>
+          <option value="vacation">vacation</option>
+          <option value="retraining">retraining</option>
+          <option value="business">business</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="savings" class="label_text">Savings</label>
+        <select id="savings" name="savings" class="formbox1">
+          <option value="default">Select your Savings</option>
+          <option value="unknown/no savings account">unknown/no savings account</option>
+          <option value="..&lt;100 DM">..&lt;100 DM</option>
+          <option value="100&lt;=..&lt;500 DM">100&lt;=..&lt;500 DM</option>
+          <option value="500&lt;=..&lt;1000 DM">500&lt;=..&lt;1000 DM</option>
+          <option value="..&gt;=1000 DM">..&gt;=1000 DM</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="installment_rate" class="label_text">Installment Rate</label>
+        <select id="installment_rate" name="installment_rate" class="formbox1">
+          <option value="default">Select credit installments as a percentage of your disposable income</option>
+          <option value="&gt;=35">&gt;=35</option>
+          <option value="25&lt;=..&lt;35">25&lt;=..&lt;35</option>
+          <option value="20&lt;=..&lt;25">20&lt;=..&lt;25</option>
+          <option value="&lt;20">&lt;20</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="personal_status_sex" class="label_text">Sex</label>
+        <select id="personal_status_sex" name="personal_status_sex" class="formbox1">
+          <option value="default">Select your Sex</option>
+          <option value="male : divorced/separated">male : divorced/separated</option>
+          <option value="female : non-single or male : single">female : non-single or male : single</option>
+          <option value="male : married/widowed">male : married/widowed</option>
+          <option value="female : single">female : single</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="other_debtors" class="label_text">Other Debtors</label>
+        <select id="other_debtors" name="other_debtors" class="formbox1">
+          <option value="default">Select is there another debtor or a guarantor for the credit</option>
+          <option value="guarantor">guarantor</option>
+          <option value="co-applicant">co-applicant</option>
+          <option value="None">None</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="present_residence" class="label_text">Present Residence</label>
+        <select id="present_residence" name="present_residence" class="formbox1">
+          <option value="default">Select length of time (in years) the debtor lives in the present residence</option>
+          <option value="&lt;1 yr">&lt;1 yr</option>
+          <option value="1&lt;=..&lt;4 yrs">1&lt;=..&lt;4 yrs</option>
+          <option value="4&lt;=..&lt;7 yrs">4&lt;=..&lt;7 yrs</option>
+          <option value="&gt;=7 yrs">&gt;=7 yrs</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="property" class="label_text">Property</label>
+        <select id="property" name="property" class="formbox1">
+          <option value="default">Select debtor's most valuable property</option>
+          <option value="unknown / no property">unknown / no property</option>
+          <option value="car or other">car or other</option>
+          <option value="building soc. savings agr./life insurance">building soc. savings agr./life insurance</option>
+          <option value="real estate">real estate</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="other_installment_plans" class="label_text">Other Installment Plans</label>
+        <select id="other_installment_plans" name="other_installment_plans" class="formbox1">
+          <option value="default">Select installment plans from providers other than the credit-giving bank</option>
+          <option value="bank">bank</option>
+          <option value="stores">stores</option>
+          <option value="none">none</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="housing" class="label_text">Housing</label>
+        <select id="housing" name="housing" class="formbox1">
+          <option value="default">Select type of housing the debtor lives in</option>
+          <option value="for free">for free</option>
+          <option value="rent">rent</option>
+          <option value="own">own</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="text_credits" class="label_text">text Credits</label>
+        <select id="text_credits" name="text_credits" class="formbox1">
+          <option value="default">Select text of credits including the current one the debtor has (or had) at this bank</option>
+          <option value="1">1</option>
+          <option value="2-3">4-5</option>
+          <option value="&gt;= 6">&gt;= 6</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="job" class="label_text">Job</label>
+        <select id="job" name="job" class="formbox1">
+          <option value="default">Select debtor's job</option>
+          <option value="unemployed/unskilled - non-resident">unemployed/unskilled - non-resident</option>
+          <option value="unskilled - resident">unskilled - resident</option>
+          <option value="skilled employee/official">skilled employee/official</option>
+          <option value="manager/self-empl./highly qualif. employee">manager/self-empl./highly qualif. employee</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="people_liable" class="label_text">People_Liable</label>
+        <select id="people_liable" name="people_liable" class="formbox1">
+          <option value="default">Select text of persons who financially depend on the debtor</option>
+          <option value="3 or more">3 or more</option>
+          <option value="0 to 2">0 to 2</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="telephone" class="label_text">Telephone</label>
+        <select id="telephone" name="telephone" class="formbox1">
+          <option value="default">Select is there a telephone landline registered on the debtor's name?</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="foreign_worker" class="label_text">Foreign Worker</label>
+        <select id="foreign_worker" name="foreign_worker" class="formbox1">
+          <option value="default">Select is the debtor a foreign worker?</option>
+          <option value="yes">Yes</option>
+          <option value="no">No</option>
+        </select>
+      </div>
+      <div class="form-group"><button type="submit" id="submit" class="submit-button">Submit</button></div>
+    </form>
+  </div>
+</div>
+</body></html>

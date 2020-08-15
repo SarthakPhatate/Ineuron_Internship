@@ -1,0 +1,26 @@
+2020-08-09 23:20:51.844240 Connection is established: Database connected successsfylly
+2020-08-09 23:20:51.844240 Lodaing the data from database to dataframe
+2020-08-09 23:20:53.083868 Execution failed on sql 'SELECT * FROM data': no such table: data
+-------------------------------------------------------------------------------------------------------------2020-08-09 23:20:51.766142 File name is incorrect
+2020-08-09 23:20:51.766142 Training the model
+2020-08-09 23:20:53.084868 cannot unpack non-iterable bool object
+2020-08-09 23:21:34.895315 Connection is established: Database connected successsfylly
+2020-08-09 23:21:35.400673 Data Insertion in database successful
+2020-08-09 23:21:35.403675 Connection is established: Database connected successsfylly
+2020-08-09 23:21:35.403675 Lodaing the data from database to dataframe
+2020-08-09 23:21:35.571798 Preparing feature column and target column
+2020-08-09 23:21:35.587810 Applying the SMOTE function to handle imbalace data
+2020-08-09 23:21:35.849705 Splitting The data into train data and test data
+-------------------------------------------------------------------------------------------------------------2020-08-09 23:21:34.241331 File name is correct
+2020-08-09 23:21:34.241331 Reading File
+2020-08-09 23:21:34.420082 Reading Columns
+2020-08-09 23:21:34.421085 Columns Renaming Successful
+2020-08-09 23:21:34.571090 data labeling Successful
+2020-08-09 23:21:34.585099 Skewness removed Successfully
+2020-08-09 23:21:34.752216 One Hot Encoding Successfully
+2020-08-09 23:21:34.894314 File Saved Successfully
+2020-08-09 23:21:35.402675 Training the model
+2020-08-09 23:21:35.876724 Training Logistic Regression model
+2020-08-09 23:21:36.303109 Training Decision Tree model
+2020-08-09 23:21:36.409165 Training Random Forest model
+2020-08-09 23:21:36.901534 Training XGboost Classifier model
