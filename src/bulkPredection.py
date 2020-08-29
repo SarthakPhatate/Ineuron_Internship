@@ -1,42 +1,30 @@
-import datetime
 import pandas as pd
-import joblib
-import numpy as np
-from src.database import sql_connection
-from src import training
+import datetime
 import shutil
+import numpy as np
 
-def train_validation(file, predection=False):
-    info = '[ info ] '
-    err = '[ error ] '
-    yield info + "File Validation in Process, Please wait<br/><br/>\n"
-    with open('Logs/PreprocessingLogs.txt','a') as f:
-        f.write("-------------------------------------------------------------------------------------------------------------\n")
-        if file.endswith('.asc'):
+def bulkPredict(file):
+    with open('Logs/bulkPredectionLogs.txt','a') as f:
+        f.write('-----------------------------------------------------------------------------------------------------\n')
+        if file.endswith('.csv'):
             f.write(str(datetime.datetime.now()) + ' File name is correct\n')
             try:
                 f.write(str(datetime.datetime.now()) + ' Reading File\n')
-                df = pd.read_csv('data/'+file,sep=' ')
+                df = pd.read_csv('bulk_pred/' + file)
                 f.write(str(datetime.datetime.now()) + ' Reading Columns\n')
-                if(df.shape[1] == 21 and df.shape[0]!=0):
-                    yield info + " File Validation Successfull<br/><br/>\n"
-                    yield info + " Data Preprocessing Started, Please wait....<br/><br/>\n"
+                if (df.shape[1] == 20 and df.shape[0] != 0):
                     try:
                         df.columns = ['status', 'duration', 'credit_history', 'purpose', 'amount', 'savings',
                                       'employment_duration',
                                       'installment_rate', 'personal_status_sex', 'other_debtors', 'present_residence',
                                       'property', 'age',
                                       'other_installment_plans', 'housing', 'number_credits', 'job', 'people_liable',
-                                      'telephone', 'foreign_worker',
-                                      'credit_risk']
+                                      'telephone', 'foreign_worker']
                         f.write(str(datetime.datetime.now()) + ' Columns Renaming Successful\n')
-                        yield info + "Column Name Changed successful<br/><br/>\n"
                     except Exception as e:
                         f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                        shutil.move("data/" + file, "BadDataFile/" + file)
-                        yield err + "Problem in renaming Columns, Please Check log file and retry uploading<br/><br/>\n"
-                        return
-
+                        shutil.move("bulk_pred/" + file, "BadPredictionFile/" + file)
+                        return "Problem is colums reading please check file again and uplaod",False
                     try:
                         # assigning the appropriate categories labels to the data of each feature
                         df['status'].replace(to_replace=[1, 2, 3, 4],
@@ -106,11 +94,9 @@ def train_validation(file, predection=False):
                         df['foreign_worker'].replace(to_replace=[1, 2], value=["yes", "no"], inplace=True)
 
                         f.write(str(datetime.datetime.now()) + ' data labeling Successful\n')
-                        yield info + "data Labeling Successful<br/><br/>\n"
                     except Exception as e:
                         f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                        yield err + "Problem in labeling features, Please Check log file and retry uploading<br/><br/>\n"
-                        return
+                        return "Problem is column nmaes please check file again and uplaod", False
 
                     try:
                         # defining the categorial columns
@@ -126,81 +112,27 @@ def train_validation(file, predection=False):
                         for col in num_col:
                             df[col] = np.log1p(df[col])
                         f.write(str(datetime.datetime.now()) + ' Skewness removed Successfully\n')
-                        yield info + "Skewness removed Successful<br/><br/>\n"
                         # droping the duration feature
-                        #df.drop(columns='duration', inplace=True)
+                        # df.drop(columns='duration', inplace=True)
                         # Arranging the Columns
                         data = df[num_col[:]]
                         # one-hot-encoding on categorical features
                         for i in categorical_col:
                             dum_col = pd.get_dummies(df[i], drop_first=True)
                             data = pd.concat([data, dum_col], axis=1)
-                        data = pd.concat([data, df['credit_risk']], axis=1)
                         f.write(str(datetime.datetime.now()) + ' One Hot Encoding Successfully\n')
-                        yield info + "One Hot Encoding Successfully<br/><br/>\n"
+                        return data,True
                     except Exception as e:
                         f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                        yield err + "Problem in feature Selection, Please Check log file and retry uploading<br/><br/>\n"
-                        return
-
-                    try:
-                        yield info + "Saving data into database<br/><br/>\n"
-                        if sql_connection(data):
-                            yield info + "Saved into Database<br/><br/>\n"
-                        else:
-                            yield err + "Error occured while inserting into Database. Please check log file<br/><br/>\n"
-                    except Exception as e:
-                        f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                        yield err + "Problem in saving Preprocessed Data, Please Check log file and retry uploading<br/><br/>\n"
-                        return
+                        return "Problem is preparing data please check file again and uplaod", False
                 else:
                     f.write(str(datetime.datetime.now()) + ' Invalid Colums/Row Length {}\n'.format(df.shape[1]))
-                    yield err + "Problem in Colums/Rwow Length, Please retry uploading correct file<br/><br/>\n"
-                    return
+                    return "Problem is column length please check file again and uplaod", False
             except Exception as e:
                 f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                yield err + "Problem in reading File, Please retry uploading correct file or check logs<br/><br/>\n"
-                return
-
-            try:
-                f.write(str(datetime.datetime.now()) + ' Training the model\n')
-                yield info + " Training started Please wait!<br/><br/>\n"
-                x_train, x_test, y_train, y_test = training.train()
-
-                f.write(str(datetime.datetime.now()) + ' Training Logistic Regression model\n')
-                yield info + " Training on Logistic Regression Model<br/><br/>\n"
-                log_model, acc1 = training.log_reg(x_train, x_test, y_train, y_test)
-                yield info + "accuracy = {}<br/><br/>\n".format(acc1)
-
-                f.write(str(datetime.datetime.now()) + ' Training Decision Tree model\n')
-                yield info + " Training on Decision Tree Model<br/><br/>\n"
-                dec_model, acc2 = training.dec_tree(x_train, x_test, y_train, y_test)
-                yield info + "accuracy = {}<br/><br/>\n".format(acc2)
-
-                f.write(str(datetime.datetime.now()) + ' Training Random Forest model\n')
-                yield info + " Training on Random Forest Model<br/><br/>\n"
-                ran_model, acc3 = training.ran_for(x_train, x_test, y_train, y_test)
-                yield info + "accuracy = {}<br/><br/>\n".format(acc3)
-
-                f.write(str(datetime.datetime.now()) + ' Training XGboost Classifier model\n')
-                yield info + " Training on XGboost Classifier Model<br/><br/>\n"
-                xgb_model, acc4 = training.xbg_class(x_train, x_test, y_train, y_test)
-                yield info + "accuracy = {}<br/><br/>\n".format(acc4)
-
-                yield info + 'Training Completed<br/><br/>\n'
-                f.write(str(datetime.datetime.now()) + ' Training Completed\n')
-                dict_ = {acc1: log_model, acc2: dec_model, acc3: ran_model, acc4: xgb_model}
-                joblib.dump(dict_[max(dict_)], 'model/model.sav')
-                yield info + "Saved best performing model"
-                f.write(str(datetime.datetime.now()) + ' Saved best performing model\n')
-
-            except Exception as e:
-                f.write(str(datetime.datetime.now()) + ' {}\n'.format(e))
-                yield err + "Problem in Training, Please Check log file and retry<br/><br/>"
-                return
+                return "Problem is reading file please check file again and uplaod", False
 
         else:
             f.write(str(datetime.datetime.now()) + ' File name is incorrect\n')
-            shutil.move("data/"+file, "BadDataFile/"+file)
-            yield err + " File name is incorrect, Please upload correct file<br/><br/>\n"
-            return
+            shutil.move("bulk_pred/" + file, "BadPredictionFile/" + file)
+            return "Problem is filename please check file again and uplaod", False

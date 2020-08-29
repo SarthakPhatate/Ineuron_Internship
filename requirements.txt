@@ -17,3 +17,4 @@ pandas==0.25.3
 six==1.13.0
 Werkzeug==0.16.0
 xgboost==1.0.2
+flask_monitoringdashboard

@@ -1,0 +1,66 @@
+-------------------------------------------------------------------------------------------------------
+2020-08-26 08:43:46.205981 Connection is established: Database connected successsfylly
+2020-08-26 08:43:46.205981 Lodaing the data from database to dataframe
+2020-08-26 08:43:46.334038 Preparing feature column and target column
+2020-08-26 08:43:46.341982 Applying the SMOTE function to handle imbalace data
+2020-08-26 08:43:46.398029 Splitting The data into train data and test data
+2020-08-26 08:43:46.796744 Logistic Regression model trained [accuracy: 0.7430025445292621]
+2020-08-26 08:43:46.860755 Decision Tree model trained [accuracy: 0.7302798982188295]
+2020-08-26 08:43:47.388773 Random Forest model trained [accuracy: 0.8396946564885496]
+2020-08-26 08:43:48.750511 XgBoost model trained [accuracy: 0.7964376590330788]
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:34:49.916150 Connection is established: Database connected successsfylly
+2020-08-28 20:34:49.916150 Lodaing the data from database to dataframe
+2020-08-28 20:34:49.965020 Preparing feature column and target column
+2020-08-28 20:34:49.966017 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:34:49.986962 Splitting The data into train data and test data
+2020-08-28 20:34:50.144570 Logistic Regression model trained [accuracy: 0.7430025445292621]
+2020-08-28 20:34:50.166511 Decision Tree model trained [accuracy: 0.7150127226463104]
+2020-08-28 20:34:50.554019 Random Forest model trained [accuracy: 0.8320610687022901]
+2020-08-28 20:34:52.083640 XgBoost model trained [accuracy: 0.7964376590330788]
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:38:05.595081 Connection is established: Database connected successsfylly
+2020-08-28 20:38:05.595081 Lodaing the data from database to dataframe
+2020-08-28 20:38:05.632974 Preparing feature column and target column
+2020-08-28 20:38:05.634029 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:38:05.650926 Splitting The data into train data and test data
+2020-08-28 20:38:05.774637 Logistic Regression model trained [accuracy: 0.7430025445292621]
+2020-08-28 20:38:05.796908 Decision Tree model trained [accuracy: 0.7379134860050891]
+2020-08-28 20:38:06.174495 Random Forest model trained [accuracy: 0.8422391857506362]
+2020-08-28 20:38:06.941103 XgBoost model trained [accuracy: 0.7964376590330788]
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:40:30.615109 Connection is established: Database connected successsfylly
+2020-08-28 20:40:30.615109 Lodaing the data from database to dataframe
+2020-08-28 20:40:30.620127 Preparing feature column and target column
+2020-08-28 20:40:30.622087 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:40:30.623084 Found array with 0 sample(s) (shape=(0, 53)) while a minimum of 1 is required.
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:43:09.524720 Connection is established: Database connected successsfylly
+2020-08-28 20:43:09.524720 Lodaing the data from database to dataframe
+2020-08-28 20:43:09.564611 Preparing feature column and target column
+2020-08-28 20:43:09.565610 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:43:09.570633 Splitting The data into train data and test data
+2020-08-28 20:43:09.714989 Logistic Regression model trained [accuracy: 0.9018518518518519]
+2020-08-28 20:43:09.730895 Decision Tree model trained [accuracy: 0.9648148148148148]
+2020-08-28 20:43:10.021083 Random Forest model trained [accuracy: 0.987037037037037]
+2020-08-28 20:43:11.038929 XgBoost model trained [accuracy: 0.9851851851851852]
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:55:25.805621 Connection is established: Database connected successsfylly
+2020-08-28 20:55:25.805621 Lodaing the data from database to dataframe
+2020-08-28 20:55:25.839524 Preparing feature column and target column
+2020-08-28 20:55:25.840522 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:55:25.846509 Splitting The data into train data and test data
+2020-08-28 20:55:26.015904 Logistic Regression model trained [accuracy: 0.9018518518518519]
+2020-08-28 20:55:26.035849 Decision Tree model trained [accuracy: 0.9592592592592593]
+2020-08-28 20:55:26.360982 Random Forest model trained [accuracy: 0.9925925925925926]
+2020-08-28 20:55:27.445367 XgBoost model trained [accuracy: 0.9851851851851852]
+-------------------------------------------------------------------------------------------------------
+2020-08-28 20:58:35.971208 Connection is established: Database connected successsfylly
+2020-08-28 20:58:35.971208 Lodaing the data from database to dataframe
+2020-08-28 20:58:36.024064 Preparing feature column and target column
+2020-08-28 20:58:36.025066 Applying the SMOTE function to handle imbalace data
+2020-08-28 20:58:36.040021 Splitting The data into train data and test data
+2020-08-28 20:58:36.150939 Logistic Regression model trained [accuracy: 0.727735368956743]
+2020-08-28 20:58:36.164867 Decision Tree model trained [accuracy: 0.7557251908396947]
+2020-08-28 20:58:36.471714 Random Forest model trained [accuracy: 0.821882951653944]
+2020-08-28 20:58:37.587653 XgBoost model trained [accuracy: 0.8040712468193384]

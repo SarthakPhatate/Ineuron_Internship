@@ -1,0 +1,118 @@
+
+2020-08-26 08:43:45.949958 Connection is established: Database connected successsfylly
+2020-08-26 08:43:46.189977 Data Insertion in database successful
+-------------------------------------------------------------------------------------------------------------
+2020-08-26 08:43:45.781951 File name is correct
+2020-08-26 08:43:45.781951 Reading File
+2020-08-26 08:43:45.805950 Reading Columns
+2020-08-26 08:43:45.805950 Columns Renaming Successful
+2020-08-26 08:43:45.861953 data labeling Successful
+2020-08-26 08:43:45.861953 Skewness removed Successfully
+2020-08-26 08:43:45.909957 One Hot Encoding Successfully
+2020-08-26 08:43:45.941962 File Saved Successfully
+2020-08-26 08:43:46.197988 Training the model
+2020-08-26 08:43:46.405988 Training Logistic Regression model
+2020-08-26 08:43:46.804743 Training Decision Tree model
+2020-08-26 08:43:46.868758 Training Random Forest model
+2020-08-26 08:43:47.396774 Training XGboost Classifier model
+2020-08-26 08:43:48.758512 Training Completed
+2020-08-26 08:43:48.870518 Saved best performing model
+-------------------------------------------------------------------------------------------------------------
+2020-08-26 08:47:52.549213 File name is incorrect
+2020-08-28 20:34:49.909169 Connection is established: Database connected successsfylly
+2020-08-28 20:34:49.910166 Length mismatch: Expected axis has 55 elements, new values have 54 elements
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:34:49.780691 File name is correct
+2020-08-28 20:34:49.780691 Reading File
+2020-08-28 20:34:49.797645 Reading Columns
+2020-08-28 20:34:49.798642 Columns Renaming Successful
+2020-08-28 20:34:49.849507 data labeling Successful
+2020-08-28 20:34:49.860484 Skewness removed Successfully
+2020-08-28 20:34:49.904359 One Hot Encoding Successfully
+2020-08-28 20:34:49.913158 Training the model
+2020-08-28 20:34:49.992946 Training Logistic Regression model
+2020-08-28 20:34:50.146564 Training Decision Tree model
+2020-08-28 20:34:50.170506 Training Random Forest model
+2020-08-28 20:34:50.554984 Training XGboost Classifier model
+2020-08-28 20:34:52.086631 Training Completed
+2020-08-28 20:34:52.213816 Saved best performing model
+2020-08-28 20:38:05.591088 Connection is established: Database connected successsfylly
+2020-08-28 20:38:05.592084 Length mismatch: Expected axis has 55 elements, new values have 54 elements
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:38:05.493682 File name is correct
+2020-08-28 20:38:05.493682 Reading File
+2020-08-28 20:38:05.506647 Reading Columns
+2020-08-28 20:38:05.508642 Columns Renaming Successful
+2020-08-28 20:38:05.544546 data labeling Successful
+2020-08-28 20:38:05.546540 Skewness removed Successfully
+2020-08-28 20:38:05.588094 One Hot Encoding Successfully
+2020-08-28 20:38:05.594078 Training the model
+2020-08-28 20:38:05.655912 Training Logistic Regression model
+2020-08-28 20:38:05.777959 Training Decision Tree model
+2020-08-28 20:38:05.799900 Training Random Forest model
+2020-08-28 20:38:06.175491 Training XGboost Classifier model
+2020-08-28 20:38:06.944095 Training Completed
+2020-08-28 20:38:07.066768 Saved best performing model
+2020-08-28 20:40:30.452427 Connection is established: Database connected successsfylly
+2020-08-28 20:40:30.609693 Length mismatch: Expected axis has 55 elements, new values have 54 elements
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:40:30.374635 File name is correct
+2020-08-28 20:40:30.374635 Reading File
+2020-08-28 20:40:30.385606 Reading Columns
+2020-08-28 20:40:30.386604 Columns Renaming Successful
+2020-08-28 20:40:30.415565 data labeling Successful
+2020-08-28 20:40:30.418560 Skewness removed Successfully
+2020-08-28 20:40:30.451430 One Hot Encoding Successfully
+2020-08-28 20:40:30.613106 Training the model
+2020-08-28 20:40:30.626088 'bool' object is not iterable
+2020-08-28 20:43:09.188434 Connection is established: Database connected successsfylly
+2020-08-28 20:43:09.507344 Data Insertion in database successful
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:43:09.102669 File name is correct
+2020-08-28 20:43:09.102669 Reading File
+2020-08-28 20:43:09.113632 Reading Columns
+2020-08-28 20:43:09.114630 Columns Renaming Successful
+2020-08-28 20:43:09.146546 data labeling Successful
+2020-08-28 20:43:09.148539 Skewness removed Successfully
+2020-08-28 20:43:09.187434 One Hot Encoding Successfully
+2020-08-28 20:43:09.517740 Training the model
+2020-08-28 20:43:09.574584 Training Logistic Regression model
+2020-08-28 20:43:09.717990 Training Decision Tree model
+2020-08-28 20:43:09.732853 Training Random Forest model
+2020-08-28 20:43:10.023818 Training XGboost Classifier model
+2020-08-28 20:43:11.042920 Training Completed
+2020-08-28 20:43:11.150647 Saved best performing model
+2020-08-28 20:55:25.451913 Connection is established: Database connected successsfylly
+2020-08-28 20:55:25.790837 Data Insertion in database successful
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:55:25.373124 File name is correct
+2020-08-28 20:55:25.373124 Reading File
+2020-08-28 20:55:25.387085 Reading Columns
+2020-08-28 20:55:25.388083 Columns Renaming Successful
+2020-08-28 20:55:25.417006 data labeling Successful
+2020-08-28 20:55:25.418002 Skewness removed Successfully
+2020-08-28 20:55:25.450955 One Hot Encoding Successfully
+2020-08-28 20:55:25.802619 Training the model
+2020-08-28 20:55:25.850341 Training Logistic Regression model
+2020-08-28 20:55:26.018894 Training Decision Tree model
+2020-08-28 20:55:26.037848 Training Random Forest model
+2020-08-28 20:55:26.362977 Training XGboost Classifier model
+2020-08-28 20:55:27.449357 Training Completed
+2020-08-28 20:55:27.560861 Saved best performing model
+2020-08-28 20:58:35.718181 Connection is established: Database connected successsfylly
+2020-08-28 20:58:35.964391 Data Insertion in database successful
+-------------------------------------------------------------------------------------------------------------
+2020-08-28 20:58:35.632455 File name is correct
+2020-08-28 20:58:35.632455 Reading File
+2020-08-28 20:58:35.648412 Reading Columns
+2020-08-28 20:58:35.648412 Columns Renaming Successful
+2020-08-28 20:58:35.683320 data labeling Successful
+2020-08-28 20:58:35.685314 Skewness removed Successfully
+2020-08-28 20:58:35.716267 One Hot Encoding Successfully
+2020-08-28 20:58:35.968252 Training the model
+2020-08-28 20:58:36.044050 Training Logistic Regression model
+2020-08-28 20:58:36.151902 Training Decision Tree model
+2020-08-28 20:58:36.166526 Training Random Forest model
+2020-08-28 20:58:36.474707 Training XGboost Classifier model
+2020-08-28 20:58:37.591644 Training Completed
+2020-08-28 20:58:37.710326 Saved best performing model

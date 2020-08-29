@@ -1,10 +1,11 @@
 FROM python:3.6
 
-# Add sample application
-COPY * /tmp/
+COPY . /usr/src/app
 
-EXPOSE 8000
+WORKDIR /usr/src/app
 
-# Run it
-RUN pip install -r /tmp/requirements.txt
-ENTRYPOINT ["python", "/tmp/application.py"]
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+CMD python application.py
